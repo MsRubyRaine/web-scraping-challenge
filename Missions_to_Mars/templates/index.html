@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+          <h1>Mission to Mars</h1>
+          <p><a class="btn btn-info btn-lg" href="/scrape" role="button" >Scrape New Data</a></p>
+        </div>
+    </div>    
+    <br>
+    <div class="container-fluid justify-content-center">
+        <div class="row text-center">
+            <div class="col">
+                <h3>Latest Mars News</h3>
+                <h5>{{space['news_title']}}</h5>
+                <p>{{space['news_p']}}</p>
+            </div>
+        </div>
+        <div class="row pb-5 text-center">
+            <div class="col">
+                <h3>Featured Mars Image</h3>
+                <img src="{{space['feat_img_url']}}">
+            </div>
+            <div class="col">
+                <h3>Mars Facts</h3>
+                {{space['html_table']|safe}}
+            </div>
+        </div>
+
+        
+
+        <div class="row text-center justify-content-center">
+            <!-- <div class="col">
+                <div class="row"><img src="{{space['hemi_img_url'][0]['img_url']}}"></div>
+                <div class="row"><h3>{{space['hemi_img_url'][0]['title']}}</h3></div>
+            </div> -->
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header"><img src="{{space['hemi_img_url'][0]['img_url']}}" class="img-fluid"></div>
+                <div class="card-body">
+                  <h3 class="card-title">{{space['hemi_img_url'][0]['title']}}</h3>
+                </div>
+            </div>
+            <!-- <div class="col">
+                <div class="row"><img src="{{space['hemi_img_url'][1]['img_url']}}"></div>
+                <div class="row"><h3>{{space['hemi_img_url'][1]['title']}}</h3></div>
+            </div> -->
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header"><img src="{{space['hemi_img_url'][1]['img_url']}}" class="img-fluid"></div>
+                <div class="card-body">
+                  <h3 class="card-title">{{space['hemi_img_url'][1]['title']}}</h3>
+                </div>
+            </div>
+            <!-- <div class="col">
+                <div class="row"><img src="{{space['hemi_img_url'][2]['img_url']}}"></div>
+                <div class="row"><h3>{{space['hemi_img_url'][2]['title']}}</h3></div>
+            </div> -->
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header"><img src="{{space['hemi_img_url'][2]['img_url']}}" class="img-fluid"></div>
+                <div class="card-body">
+                  <h3 class="card-title">{{space['hemi_img_url'][2]['title']}}</h3>
+                </div>
+            </div>
+            <!-- <div class="col">
+                <div class="row"><img src="{{space['hemi_img_url'][3]['img_url']}}"></div>
+                <div class="row"><h3>{{space['hemi_img_url'][3]['title']}}</h3></div>
+            </div> -->
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header"><img src="{{space['hemi_img_url'][3]['img_url']}}" class="img-fluid"></div>
+                <div class="card-body">
+                  <h3 class="card-title">{{space['hemi_img_url'][3]['title']}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+</body>
+</html>
